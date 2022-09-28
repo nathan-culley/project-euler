@@ -69,9 +69,14 @@ function cycleDivisors(dividend) {
         }
         //console.log(primeFactorArray);
         //console.log(checkCompleteness(primeFactorArray, divisor, dividend));
-        if (checkCompleteness(primeFactorArray, divisor, dividend) == true) {
+/*         if (checkCompleteness(primeFactorArray, divisor, dividend) == true) {
+            largestFactorFound = true;
+        } */
+
+        if (checkCompleteness(primeFactorArray, dividend) == true) {
             largestFactorFound = true;
         }
+
         divisor += 2;
         //console.log(divisor);
         //console.log(largestFactorFound);
@@ -109,9 +114,33 @@ function checkDivisibility(dividend,divisor) {
     }
 }
 
+function checkCompleteness(primeFactorArray, dividend) {
+    let dividendCheck = dividend;
+    
+    //loop through elements of primeFactorArray until either 1) dividendCheck is equal to 1 (return true), or 2) dividendCheck can no longer be divided by any element of primeFactorArray without a remainder (return false).
+
+    while (dividendCheck != 1) {
+        let divisorCheck = false;
+        for (let primeFactor of primeFactorArray) {
+            
+            if (dividendCheck % primeFactor == 0) {
+                dividendCheck = dividendCheck / primeFactor;
+                divisorCheck = true;
+            }
+        }
+        if (divisorCheck == false) {
+            return false;
+        }
 
 
-function checkCompleteness(primeFactorArray, divisor, dividend) {
+    }
+    return true;
+}
+
+
+
+
+/* function checkCompleteness(primeFactorArray, divisor, dividend) {
     let multiple = 1;
     for (let i = 0; i < primeFactorArray.length; i++) {
         //console.log(primeFactorArray.length)
@@ -140,4 +169,4 @@ function checkCompleteness(primeFactorArray, divisor, dividend) {
         return false;
         //console.log()
     }
-}
+} */
