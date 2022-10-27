@@ -4,7 +4,7 @@ Problem Description:
 
 Find the largest palindrome made from the product of two 3-digit numbers."
 
-Solution 0003A:
+Solution 0004A:
 
 This solution starts by initiating two for loops, one for the first three-digit number (firstNum), counting down from 999, and the other for the second three-digit number(secondNum), counting down from the current value of the first number. Both loops are set to terminate when the number reaches a "floor" (floor) that is initially set at 100 (the lowest possible three-digit number). It then multiplies the numbers together and checks if the product is a palindrome. If so, it checks to see if the product is larger than the current largest palindrome found (bigPal). If so, it sets the product as the new value of bigPal and sets the current secondNum as the new floor.
 
