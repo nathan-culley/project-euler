@@ -9,3 +9,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 Solution 0002A:
 
 This solution uses only one function (createFib), which has a for loop that starts at index = 1, checks the index for divisibility by 2, adds the index to a running sum, and then adds the index to itself and repeats the process until index is greater than 4 million. The maximum number is declared as maxNumber at the start of the program, so all that is required is to change the value of maxNumber to see a different sum of even Fibonacci terms.
+
+Solution 0002B:
+
+Solution 0002A...was not actually a solution. The series generated was a series of the powers of 2, which would have been obvious to me if I'd actually bothered running the numbers. This one, though, has been checked both by logging the Fibonacci series as it runs and by verifying with Project Euler itself. It creates the next iteration of the first number to be added (i.e. the smaller one) by using prevNum = i - prevNum, where i is the most recent Fibonacci number generated. The &lt;code&gt; sections have been modified to reflect the new algorithm.

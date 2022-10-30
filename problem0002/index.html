@@ -24,17 +24,21 @@
             <div id="first-code">
                 <code>let maxNumber = 4000000;</code>
                 <br>
-                <code>function createFib(maxNumber) {</code>
+                <code>function createFib(maxNum) {</code>
                 <br>
                 <code>let sum = 0;</code>
                 <br>
-                <code>for (i = 1; i &lt;= maxNumber; i += i) {</code>
+                <code>let prevNum = 0;</code>
+                <br>
+                <code>for (i = 1; i &lt;= maxNum; i = i + prevNum) {</code>
                 <br>
                 <code>if (i % 2 == 0) {</code>
                 <br>
                 <code>sum = sum + i;</code>
                 <br>
                 <code>}</code>
+                <br>
+                <code>prevNum = i - prevNum;</code>
                 <br>
                 <code>}</code>
                 <br>
@@ -52,12 +56,16 @@
     <div id="code">
         <script>
             let maxNumber = 4000000;
-            function createFib(maxNumber) {
+            function createFib(maxNum) {
                 let sum = 0;
-                for (i = 1; i <= maxNumber; i += i) {
-                    if (i % 2 == 0) {
+                let prevNum = 0;
+                for (let i = 1; i < maxNum; i = i +prevNum) {
+                    if ( i % 2 == 0) {
                         sum = sum + i;
                     }
+                    //sum = sum + i;
+                    console.log (i, sum);
+                    prevNum = i - prevNum;
                 }
                 return sum;
             }
