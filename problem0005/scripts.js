@@ -15,17 +15,20 @@ for (let i = maxNum; i >= 1; i--) {
         if (primeCheck(i) == true) {
             runningTotal *= i;
             countedArray.push(i);
+            console.log(i);
             /*console.log(i);
             console.log(primeCheck(i));
             console.log(runningTotal);
             console.log(countedArray);*/
         }
         else {
-            const counterPrimeFactors = findPrimeFactors(i);
+            const counterFactors = findFactors(i);
 
-            //console.log(counterPrimeFactors);
+            //console.log(counterFactors);
             let subCounter = i;
-            for (let factor of counterPrimeFactors) {
+            //for (let factor of counterFactors) {
+            for (let i = counterFactors.length - 1; i >= 0; i--) {
+                let factor = counterFactors[i];
                 if (inAPF(factor) == false) {
                     allPrimeFactors.push(factor);
                     //console.log(allPrimeFactors[allPrimeFactors.length - 1]);
@@ -35,10 +38,14 @@ for (let i = maxNum; i >= 1; i--) {
                     //console.log(subCounter);
                 }
             }
+            console.log(i);
+            console.log(counterFactors);
             runningTotal *= subCounter;
             countedArray.push(subCounter);
         }
     }
+    //console.log(countedArray);
+    
     console.log(runningTotal);
 }
 return runningTotal;
@@ -79,25 +86,28 @@ function divisibilityCheck(divisor,dividend) {
     }
 }
 
-function findPrimeFactors(divisor) {
-    const counterPrimeFactors = [];
-    //console.log(counterPrimeFactors);
+function findFactors(divisor) {
+    const counterFactors = [];
+    //console.log(counterFactors);
     for (let i = 1; i <= divisor/2; i++) {
         //console.log(i,divisor);
         //console.log(divisibilityCheck(i,divisor));
         //console.log(primeCheck(divisor));
 
-        if (divisibilityCheck(i,divisor) == true && primeCheck(i) == true) {
+        if (divisibilityCheck(i,divisor) == true) {
             //console.log(divisibilityCheck(i,divisor));
             //console.log(primeCheck(divisor));
-            counterPrimeFactors.push(i);
+            counterFactors.push(i);
         }
     }
-    //console.log(counterPrimeFactors);
-    return counterPrimeFactors;
+    //console.log(counterFactors);
+    return counterFactors;
     
 }
 
 function inAPF(num) {
     return allPrimeFactors.includes(num);
 }
+
+
+// && primeCheck(i) == true
