@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+#example-problem {
+    border: black solid 2px;
+    background-color: rgb(184, 184, 184);
+    padding: 2%;
+}
+
+a {
+    color: rgb(141, 103, 31)
+}
