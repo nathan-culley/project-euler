@@ -118,16 +118,25 @@ pre {
     grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 600px) {
+    #description {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 #explanation {
     border: 1px solid black;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
 }
 
 #code {
     border: 1px solid black;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
+    background-color: var(--color-text-variation-1);
+    color: var(--color-background-variation-2);
 }
 
 #demonstration {
