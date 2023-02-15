@@ -1,0 +1,289 @@
+[33mcommit 57108f8a286cd5aeffd33fb41d3804921495022d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Jan 17 14:23:06 2023 -0500
+
+    Complete solution to problem 0007
+    
+    Finished the problem with two functions. One of the functions checks if a given number 'i' is prime by checking it against all the previously found primes in the array primeArray (which starts with 2 already in it). The other function iterates through all odd numbers until primeArray.length is equal to targetNum, which is the n for the nth prime number you're looking for; while looping through the odd numbers, it calls the first function to check if each number is prime, and if so, adds it to the end of primeArray. The function returns the last element of primeArray when this is complete.
+
+[33mcommit fc604020060e4fafa6b8bd3ab3fabdd2eabee592[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Jan 17 13:40:49 2023 -0500
+
+    Add basic files for problem 0007
+
+[33mcommit 7d92df779c88b9c2ae958c9a12fcdcc0c2c225e8[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Dec 20 20:22:40 2022 -0500
+
+    Add thematic breaks between sections
+    
+    Added <hr> tags between the major sections of the template page
+
+[33mcommit f6ef6e61cc7c82cdb0bf7bed5149fe667d259162[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Mon Dec 19 15:47:48 2022 -0500
+
+    Change #description to grid
+    
+    #description now has the display: grid property with #explanation and #code in two equal columns.
+
+[33mcommit ed2602aa0b46ccdfb7f5dde9ee4adae37cb4109d[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sun Dec 18 13:58:16 2022 -0500
+
+    Create templates folder and move template.html
+    
+    Created a new directory in the top-level directory called Templates. Templates now contains its own index.html (the old template.html), styles.css, scripts.js, and README.md files to serve as guidelines for all problem pages.
+
+[33mcommit a898e7c4e951041a21ee7ad30252d1ed7f659851[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 22:11:38 2022 -0500
+
+    Add placeholder content
+    
+    Added headers for the main sections of the template file and then filled in Lorem content as placeholders.
+
+[33mcommit 6440d99ed260655341390ea399cd39cc1cd70dc1[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 21:55:43 2022 -0500
+
+    Add template file
+    
+    Added a template file to the top-level folder to set standard practices across all problem pages.
+
+[33mcommit 331805b3927192f00af2d58d4ad2f9b82211176f[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 21:49:16 2022 -0500
+
+    Add script files to all problem pages
+    
+    Added scripts.js files to the folders for each problem page, and moved any JS code in the html files to them.
+
+[33mcommit 0df7b298492b5a735114b6fbd3661dde01983d99[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 21:39:18 2022 -0500
+
+    Standardize colors across problem pages
+    
+    All problem pages have been given styles.css pages and the colors from the Project Euler website have been added as :root properties.
+
+[33mcommit 9ab480fc4b9837b28f711b24863d27a7aa540ff8[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 21:23:41 2022 -0500
+
+    Add default colors from Project Euler website
+    
+    Pulled default colors from the Project Euler website to use as variables in styles.css
+
+[33mcommit 60ec5af52b0495e10da50b3eb44e39fc19f3c30c[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 21:01:51 2022 -0500
+
+    Solve problem
+    
+    Solved problem. One function adds the sums of the squares, one function adds the squares of the sums, and a third function takes the difference between the two.
+
+[33mcommit dfff999a1051c9128a3b11e409a3b01f7e794c58[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 20:50:38 2022 -0500
+
+    Link files
+
+[33mcommit 388861e2c23c19d93dc210b851f94a5090a90a62[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Dec 17 20:47:21 2022 -0500
+
+    Create basic files for problem 0006
+    
+    Created index, scripts, styles, and readme files for problem 0006
+
+[33mcommit 8b74ee3ee74102645537824c38b0c3f7f8cd027d[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Dec 6 15:18:27 2022 -0500
+
+    Update description on main page
+    
+    I added content to the 'Who made this page?' and 'How can I access the solutions?' sections of the main project page.
+
+[33mcommit 10875ea77baf216acac3ada87c81be1343d97374[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Nov 17 17:40:33 2022 -0500
+
+    Add similar style to Problem0001
+    
+    Added a styles.css file to Problem0001 and gave it basic styling similar to the main page.
+
+[33mcommit 9eeaf37597705ce0b9ac1a76805bc68120d9250b[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Nov 15 13:32:33 2022 -0500
+
+    Add basic styling
+    
+    Added basic styling, including background and font colors that are similar to those of the Project Euler website.
+
+[33mcommit d25ecf6754fb3d5a1356b0d07c18745bc1858fc8[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Nov 15 13:22:58 2022 -0500
+
+    Add project description
+    
+    Added a brief description of Project Euler, along with an (advanced) example problem and a clarification of Project Euler's restrictions on publishing solutions.
+
+[33mcommit ef21c879f90cf134fa4932fe1f109f555683cd73[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sun Nov 13 19:49:16 2022 -0500
+
+    Sectioned page and ordered links to solutions
+    
+    The page now has a title, an About section, and a Problems and Solutions section, with links to the solutions in the last section. Most other content is still missing.
+
+[33mcommit ae032973200c05a703942b8e397650e79c3f0f29[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Nov 10 21:22:49 2022 -0500
+
+    Create top-level page for all Project Euler problems
+    
+    Created a central page to link to the pages for all the Project Euler problems I've solved so far.
+
+[33mcommit 56856303b38a9dac6bce76341cd9c3db4a9fb7c9[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Fri Nov 4 21:35:40 2022 -0400
+
+    Added titles to pages for problems 1, 3, 4, and 5
+    
+    Updated the title element for problems 1, 3, 4, and 5 to read 'Project Euler | Problem X: Problem Description'
+
+[33mcommit 77951082adb59c8f5b422e30d37f459df091f49b[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Fri Nov 4 21:27:29 2022 -0400
+
+    Provide correct solution
+    
+    This program provided the correct solution to the problem. It calculated the smallest positive number evenly divisible by all numbers 1 through 20 by first multiplying 1 through 20 together, then repeatedly dividing the resulting number by 20 down through 1 while checking at each step to make sure that next number was still divisible by all (and skipping that division if so).
+
+[33mcommit 5d1a08a36c5c0d22445e792e99526f76ce911d59[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Nov 3 17:35:26 2022 -0400
+
+    Create correct arrays of the factors of each number counted
+    
+    The program in its current form counts down from the max number (20), determines what all of the counter's factors are, and sends those factors to a global array that is intended to make sure no factors get double-counted. However, it still seems to be double-counting factors.
+
+[33mcommit a85f4282b1a7fcf27484dd0b9f0bd2299e16cd44[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Nov 3 16:54:45 2022 -0400
+
+    Calculate number divisible by a numbers 1-20
+    
+    At this stage of the problem, the program calculates a number that is divisible by every number from 1 to 20, it's just not the smallest such number.
+
+[33mcommit 5d404d069ae6160f7d97fbd81a13fbe34cfacb2c[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sat Oct 29 21:10:17 2022 -0400
+
+    Published Solution 0002B (the first correct solution)
+    
+    I discovered that what I thought was the solution to this problem actually generated a completely different, irrelevant series and that my Solution 0002A was wrong. Solution 0002B has been verified with Project Euler and can be observed in the console to generate a genuine Fibonacci series.
+
+[33mcommit d4aa03855fc3f0b09a79f3f122567eda10f2261c[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Oct 27 15:49:02 2022 -0400
+
+    Corrected solution number in readme
+    
+    Changed the title of the first solution for this in the README from 'Solution 0003A' to 'Solution 0004A'.
+
+[33mcommit ca666fb985ef8bcfddceeabdde5ea380d07d2083[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Thu Oct 27 15:47:15 2022 -0400
+
+    Calculate largest palindrome product of two three-digit numbers
+    
+    This program rapidly computes the largest possible product of two three-digit numbers that is also a palindrome (reads the same forward and backward.
+    
+    This solution starts by initiating two for loops, one for the first three-digit number (firstNum), counting down from 999, and the other for the second three-digit number(secondNum), counting down from the current value of the first number. Both loops are set to terminate when the number reaches a floor (floor) that is initially set at 100 (the lowest possible three-digit number).
+    
+    It then multiplies the numbers together and checks if the product is a palindrome. If so, it checks to see if the product is larger than the current largest palindrome found (bigPal). If so, it sets the product as the new value of bigPal and sets the current secondNum as the new floor.
+    
+    This solution works quickly by 1) immediately eliminating any product that is not a palindrome or is not larger than the largest previously-found palindrome, and 2) using the lower number of any pair that results in a palindrome to set a lower bound for the factors of any potential future palindromes. This rapidly shrinks the search space.
+
+[33mcommit e9ee3cb156d8e48b950326a5d5a50908313174dd[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Sep 28 16:51:05 2022 -0400
+
+    Improve commenting and README documentation
+    
+    Unneccessary comments from script.js were cleaned up and more concise/descriptive comments added to explain each function. Solution 0003B added to README file.
+
+[33mcommit aa9c9e4df2774a2ee42092e4e445bea60ddaa52c[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Sep 28 16:33:40 2022 -0400
+
+    Improve efficiency of checkCompleteness
+    
+    checkCompleteness now takes dividend and repeatedly divides it by all elements of primeFactorArray until either 1) the result is equal to zero and therefore all prime factors have been found, or 2) the result can no long be cleanly divided by any of the prime factors and therefore one or more prime factors remains. This is much faster than the previous solution, which took 2 minutes 33 seconds to find the largest prime of 600851475143. This solution returned the result instantly.
+
+[33mcommit 42b0de7c183d8f1d082fc175390ece81a391b1e6[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Sep 28 14:45:37 2022 -0400
+
+    Update problem README file.
+    
+    Added a solution description to this problem's README file. Overall project README has not been updated.
+
+[33mcommit 735225693abb7f5ed585e958b2474518c5a1a340[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Sep 28 14:07:49 2022 -0400
+
+    Determine prime factors of arbitrarily large numbers.
+    
+    This commit meets the criteria laid out by the problem and is able to find the largest prime factor of 600851475143 (which is 6857), along with any other number set as the variable 'dividend'. However, it is slow, taking about 3 minutes to compute the above prime factor. The checkCompleteness function is clumsily written, simply checking if the current divisor being checked is greater than or equal to the dividend divided by the smallest prime factor, and terminating the search if it is. The plan is to replace the current checkCompleteness function with another one that simply divides the dividend by all the elements of primeFactorArray repeatedly until it either arrives at a quotient of 1 or none of elements cleanly divide the running total anymore.
+
+[33mcommit 3eb540aeebcfbadd746b6d14584fb0ca41d64521[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Fri Sep 23 15:36:32 2022 -0400
+
+    Determine prime factors and add to array
+    
+    The current state of the project is able to take a dividend and make an array of its prime factors, but the completeness check needs work as it doesn't recognize when a prime factor is the largest for a given divident. The while loop in the cycleDivisors function is commented out while this gets fixed.
+
+[33mcommit 82641192bfb4f02c59ba55c6dc9debdf7d252e63[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Sep 21 15:46:58 2022 -0400
+
+    Determine largest and smallest factors
+    
+    Created a loop that determines the largest and smallest factors of the given dividend.
+
+[33mcommit 26ed5111790b51c62adf45bfb0e40fe31e7d0bc5[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Tue Jun 14 15:40:12 2022 -0400
+
+    Create readme and first solution for Project Euler Problem 2
+    
+    Created new files for Problem 2 of Project Euler. This problem involves summing the even terms of the Fibonacci Sequence up to four million. A simple HTML page with JavaScript was used. The top of the page includes the verbatim problem description from the Project Euler website and the next section down displays and explains my code, including the solution to the problem.
+
+[33mcommit 46a29784f04da0d66365c074127b7f93945273c3[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Nov 17 13:52:21 2021 -0500
+
+    updated top-level README
+
+[33mcommit 0efa357c5f9fd1c36b79110169beb962c847e74c[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Wed Nov 17 13:49:47 2021 -0500
+
+    created a new readme for problem 0001. Intend to have a running README for each problem with a description of each new solution I come up with.
+
+[33mcommit b63bccd40bdcc7acd761bfff1d0877f0ccc7541d[m
+Author: Nathan Culley <nathan@nathanculley.com>
+Date:   Sun Nov 14 17:34:45 2021 -0500
+
+    added problem 0001, multiples of 3 and 5
+
+[33mcommit c8dd13c3634c1d9d8622fb14804364ef7279da14[m
+Author: nathan-culley <78763642+nathan-culley@users.noreply.github.com>
+Date:   Mon Nov 8 11:12:06 2021 -0500
+
+    Initial commit
