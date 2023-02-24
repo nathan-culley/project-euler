@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Euler | Problem 1: Multiples of 3 or 5</title>
     <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
     <header>
@@ -26,45 +27,65 @@
         <div class="description">
             <div class="half explanation">
                 <h2>Explanation</h2>
-                <p>Briefly explain the mathematical concepts behind this problem, but do not yet give the answer. Explain how the adjacent code uses these concepts to find the answer.</p>
+                <p>As the first problem in Project Euler, this is a fairly easy problem to solve--even those without much mathematical talent are likely to be able to guess a workable approach. In this case, I simply set a top number "maxNum" (in this case 1,000) and then counted up from zero to maxNum, checking each number to see if it was a multiple of 3 (firstNum) or 5 (secondNum); if so, I added it to a running total of such multiples that started out at zero. You can try it yourself below: </p>
             </div>
             <div class="half code">
                 <h2>Code</h2>
-                <pre><code>Copy and paste the code as-is from the associated scripts.js file.</code></pre>
-                <pre><code>Make sure you have clear variable/function names and good commenting.</code></pre>
-                <pre><code>Use as many lines as necessary.</code></pre>
+                <pre><code>
+                    
+function sumMultiples(firstNum, secondNum, maxNum) {
+    let sum = 0;
+    for (let i = 0; i < maxNum; i++) {
+        if (checkFirstNum(i, firstNum) | checkSecondNum(i, secondNum)) {
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+
+function checkFirstNum(counter, firstNum) {
+    let remainder = counter % firstNum;
+    if (remainder === 0) {
+        return true;
+    }
+}
+
+function checkSecondNum(counter, secondNum) {
+    let remainder = counter % secondNum;
+    if (remainder == 0) {
+        return true;
+    }
+}
+
+console.log(sumMultiples(3, 5, 1000));
+
+//check the console to see what was logged
+                </code></pre>
             </div>
         </div>
         <div class="demonstration">
             <h2>Demonstration:</h2>
-            <p>If necessary, include text here explaining the demonstration, then proceed to show your work via demo boxes and additional explanatory paragraphs as needed.</p>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
+            <p>Set your own numbers and see what their multiples sum up to:</p>
+            <div class="demo-box" id="first-demo">
+                <form action="" id="user-input">
+                    <div class="input-label">
+                        <label for="first-num">First number (max 10)</label>
+                        <input id="first-num" type="number" min="1" max="10">
+                    </div>
+                    <div class="input-label">
+                        <label for="second-num">Second number (max 10)</label>
+                        <input id="second-num" type="number" min="1" max="10">
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="output-section">
+                    <h3>Sum:</h3>
+                    <p id="output-number"></p>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="solution" id="sol-B">
-        <h2 class="solution-header">Solution B</h2>
-        <div class="description">
-            <div class="half explanation">
-                <h2>Explanation</h2>
-                <p>Briefly explain the mathematical concepts behind this problem, but do not yet give the answer. Explain how the adjacent code uses these concepts to find the answer.</p>
-            </div>
-            <div class="half code">
-                <h2>Code</h2>
-                <pre><code>Copy and paste the code as-is from the associated scripts.js file.</code></pre>
-                <pre><code>Make sure you have clear variable/function names and good commenting.</code></pre>
-                <pre><code>Use as many lines as necessary.</code></pre>
-            </div>
-        </div>
-        <div class="demonstration">
-            <h2>Demonstration:</h2>
-            <p>If necessary, include text here explaining the demonstration, then proceed to show your work via demo boxes and additional explanatory paragraphs as needed.</p>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
-            <div class="demo-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquid, necessitatibus laudantium repellendus cum maiores labore ut velit sunt, illo facilis quo iste ratione eum? Illum rem velit doloribus maiores.</div>
-        </div>
-    </section>
+    
 
 
     <script src="./scripts.js"></script>

@@ -22,4 +22,3 @@ function checkSecondNum(counter, secondNum) {
     }
 }
 
-console.log(sumMultiples(3, 5, 1000));

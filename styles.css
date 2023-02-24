@@ -148,6 +148,11 @@ pre {
 
 }
 
+.input-label {   
+    display: flex;
+    flex-direction: column;
+}
+
 .demo-box {
     border: 1px solid black;
     border-radius: 5px;

@@ -1,6 +1,14 @@
+/*base-level properties*/
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url('../PlayfairDisplay-VariableFont_wght.ttf');
+}
+
 :root {
     --font-default: "Segoe UI", Arial, sans-serif;
     --font-monospace: "Lucida Consolas", "Consolas", "Courier New", monospace;
+    --font-custom-1: "Playfair Display";
     --color-white: #fff;
     --color-orange: #f93;
     --color-dark-orange: #f71;
@@ -30,12 +38,33 @@
     --color-border-default: #bbb;
     --color-border-variation-1: #999;
     --color-brown: #6b4e3d
- }
 
-body {
-    background-color: rgb(230, 230, 230);
 }
 
-a {
-    color: rgb(141, 103, 31)
+html {
+    font-family: var(--font-default);
+}
+
+
+#first-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#user-input {
+    border: 1px solid var(--color-dark-orange);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.input-label {
+    max-width: 150px;
+}
+
+#output-section {
+    border: 1px solid var(--color-dark-orange);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
 }
