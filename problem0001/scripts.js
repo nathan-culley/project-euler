@@ -1,22 +1,25 @@
-let sum = 0; //the current sum of all the multiples of 3 and 5
-
-        function threeCheck(counter) { //checks if counter is divisible by 3
-            let remainder = counter % 3;
-            if (remainder === 0) {
-            return true;
-            }
+function sumMultiples(firstNum, secondNum, maxNum) {
+    let sum = 0;
+    for (let i = 0; i < maxNum; i++) {
+        if (checkFirstNum(i, firstNum) | checkSecondNum(i, secondNum)) {
+            sum = sum + i;
         }
+    }
+    return sum;
+}
 
-        function fiveCheck(counter) { //checks if counter is divisible by 5
-            let remainder = counter % 5;
-            if (remainder === 0) {
-            return true;
-            }
-        }
+function checkFirstNum(counter, firstNum) {
+    let remainder = counter % firstNum;
+    if (remainder === 0) {
+        return true;
+    }
+}
 
-        for (let counter = 0; counter < 1000; counter++) { 
-            if (threeCheck(counter) | fiveCheck(counter)) {
-            sum = sum + counter;
-            }
-        }
-        console.log(sum);
+function checkSecondNum(counter, secondNum) {
+    let remainder = counter % secondNum;
+    if (remainder == 0) {
+        return true;
+    }
+}
+
+console.log(sumMultiples(3, 5, 1000));
