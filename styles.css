@@ -120,8 +120,8 @@ pre {
     background-color: var(--color-background-variation-1);
 }
 
-@media screen and (max-width: 600px) {
-    #description {
+@media screen and (max-width: 700px) {
+    .description {
         display: flex;
         flex-direction: column;
     }
