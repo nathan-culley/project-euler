@@ -1,24 +1,23 @@
 function sumMultiples(firstNum, secondNum, maxNum) {
     let sum = 0;
     for (let i = 0; i < maxNum; i++) {
-        if (checkFirstNum(i, firstNum) | checkSecondNum(i, secondNum)) {
+        if (i % firstNum == 0 | i % secondNum == 0) {
             sum = sum + i;
         }
     }
     return sum;
 }
 
-function checkFirstNum(counter, firstNum) {
-    let remainder = counter % firstNum;
-    if (remainder === 0) {
-        return true;
-    }
-}
+console.log(sumMultiples(3,5,1000));
 
-function checkSecondNum(counter, secondNum) {
-    let remainder = counter % secondNum;
-    if (remainder == 0) {
-        return true;
-    }
-}
+const firstInput = document.getElementById("first-input");
+const secondInput = document.getElementById("second-input");
+const upperNum = document.getElementById("upper-bound");
+const submitBtn = document.getElementById("submit-btn");
+const outputNum = document.getElementById("output-number");
 
+
+submitBtn.addEventListener("click", function() {
+    event.preventDefault();
+    outputNum.textContent = sumMultiples(firstInput.value, secondInput.value, upperNum.value);
+})

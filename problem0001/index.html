@@ -27,7 +27,7 @@
         <div class="description">
             <div class="half explanation">
                 <h2>Explanation</h2>
-                <p>As the first problem in Project Euler, this is a fairly easy problem to solve--even those without much mathematical talent are likely to be able to guess a workable approach. In this case, I simply set a top number "maxNum" (in this case 1,000) and then counted up from zero to maxNum, checking each number to see if it was a multiple of 3 (firstNum) or 5 (secondNum); if so, I added it to a running total of such multiples that started out at zero. You can try it yourself below: </p>
+                <p>As the first problem in Project Euler, this is a fairly easy problem to solve--even those without much mathematical talent are likely to be able to guess a workable approach. In this case, I simply set a top number "maxNum" (in this case 1,000) and then counted up from zero to maxNum, checking each number to see if it was a multiple of 3 (firstNum) or 5 (secondNum); if so, I added it to a running total of such multiples (sum) that started out at zero. You can try it yourself below: </p>
             </div>
             <div class="half code">
                 <h2>Code</h2>
@@ -36,28 +36,14 @@
 function sumMultiples(firstNum, secondNum, maxNum) {
     let sum = 0;
     for (let i = 0; i < maxNum; i++) {
-        if (checkFirstNum(i, firstNum) | checkSecondNum(i, secondNum)) {
+        if (i % firstNum == 0 | i % secondNum == 0) {
             sum = sum + i;
         }
     }
     return sum;
 }
 
-function checkFirstNum(counter, firstNum) {
-    let remainder = counter % firstNum;
-    if (remainder === 0) {
-        return true;
-    }
-}
-
-function checkSecondNum(counter, secondNum) {
-    let remainder = counter % secondNum;
-    if (remainder == 0) {
-        return true;
-    }
-}
-
-console.log(sumMultiples(3, 5, 1000));
+console.log(sumMultiples(3,5,1000));
 
 //check the console to see what was logged
                 </code></pre>
@@ -69,14 +55,18 @@ console.log(sumMultiples(3, 5, 1000));
             <div class="demo-box" id="first-demo">
                 <form action="" id="user-input">
                     <div class="input-label">
-                        <label for="first-num">First number (max 10)</label>
-                        <input id="first-num" type="number" min="1" max="10">
+                        <label for="first-input">First number (max 10)</label>
+                        <input id="first-input" type="number" min="1" max="10" value="3">
                     </div>
                     <div class="input-label">
-                        <label for="second-num">Second number (max 10)</label>
-                        <input id="second-num" type="number" min="1" max="10">
+                        <label for="second-input">Second number (max 10)</label>
+                        <input id="second-input" type="number" min="1" max="10" value="5">
                     </div>
-                    <input type="submit">
+                    <div class="input-label">
+                        <label for="upper-bound">Upper bound (min 1,000, max 10,000)</label>
+                        <input id="upper-bound" type="number" min="1000" max="10000" value="1000">
+                    </div>
+                    <input type="submit" id="submit-btn">
                 </form>
                 <div id="output-section">
                     <h3>Sum:</h3>
