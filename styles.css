@@ -37,7 +37,7 @@
     --color-text-link-hover: #999;
     --color-border-default: #bbb;
     --color-border-variation-1: #999;
-    --color-brown: #6b4e3d
+    --color-brown: #6b4e3d;
 
 }
 
@@ -52,11 +52,7 @@ body {
 }
 
 header {
-
-}
-
-main {
-
+    display: none;
 }
 
 section {
@@ -111,13 +107,18 @@ pre {
 /*specific sections*/
 
 #intro {
+    background-color: var(--color-background-variation-1);
 
+}
+
+.solution {
+    background-color: var(--color-background-variation-1);
 }
 
 .description {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--color-background-variation-1);
+    /* background-color: var(--color-background-variation-1); */
 }
 
 @media screen and (max-width: 700px) {
@@ -145,7 +146,7 @@ pre {
 }
 
 .demonstration {
-
+    
 }
 
 .input-label {   
@@ -159,6 +160,8 @@ pre {
     margin: 5px;
     padding: 10px;
     box-shadow: 1px 1px 2px 1px var(--color-light-brown);
+    background-color: var(--color-background-default);
+
 }
 
 #example-problem {
