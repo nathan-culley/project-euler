@@ -5,8 +5,6 @@ function createFib(maxNum) {
         if ( i % 2 == 0) {
             sum = sum + i;
         }
-        //sum = sum + i;
-        //console.log (i, sum);
         prevNum = i - prevNum;
     }
     return sum;
