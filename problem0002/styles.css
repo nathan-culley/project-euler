@@ -31,3 +31,35 @@
     --color-border-variation-1: #999;
     --color-brown: #6b4e3d
  }
+
+ #first-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+ #user-input {
+    border: black solid 1px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+ }
+
+ #output-section {
+    border: black solid 1px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+ }
+
+ .input-label {
+    display: flex;
+    flex-direction: column;
+ }
+
+ input {
+    margin: 5px;
+ }
+
+ #input-max {
+    max-width: 150px;
+ }

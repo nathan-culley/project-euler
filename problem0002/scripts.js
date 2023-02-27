@@ -1,4 +1,3 @@
-let maxNumber = 4000000;
 function createFib(maxNum) {
     let sum = 0;
     let prevNum = 0;
@@ -7,10 +6,21 @@ function createFib(maxNum) {
             sum = sum + i;
         }
         //sum = sum + i;
-        console.log (i, sum);
+        //console.log (i, sum);
         prevNum = i - prevNum;
     }
     return sum;
 }
-let evenSum = createFib(maxNumber);
-document.getElementById("solution").innerHTML += evenSum + ".";
+
+console.log(createFib(4000000));
+
+//check the console to see what was generated
+
+const maxInput = document.getElementById("input-max");
+const submitBtn = document.getElementById("submit-btn");
+const displaySum = document.getElementById("output-number");
+
+submitBtn.addEventListener("click", function() {
+    event.preventDefault();
+    displaySum.textContent = createFib(maxInput.value);
+})
